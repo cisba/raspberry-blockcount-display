@@ -16,6 +16,11 @@ Every new block [flash](https://youtu.be/ye30J9S7PQI) the number.
 | SCK (CLOCK) | 23   |
 | RCK (LATCH) | 24   |
 
+Reference:
+
+- [74HC595](http://domoticx.com/arduino-display-module-8x7-segmenten-75hc595/)
+- [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/)
+
 ## Requirements
 - [Pi7SegPy](https://pypi.org/project/Pi7SegPy/)
 - [python-bitcoinlib](https://github.com/petertodd/python-bitcoinlib)
