@@ -24,8 +24,11 @@ def display():
 def counter():
     global a
     while True:
-        proxy = bitcoin.rpc.Proxy()
-        x = str(proxy.getblockcount())
+        try:
+            proxy = bitcoin.rpc.Proxy()
+            x = str(proxy.getblockcount())
+        except:
+            x = a
         if x != a:
             for l in range(0, 10):
                 a = "        "
