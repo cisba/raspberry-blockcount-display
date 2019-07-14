@@ -1,0 +1,13 @@
+# cp /storage/root/blockcount-display.service /etc/systemd/system/blockcount-display.service
+[Unit]
+Description=BTC Blockcount Display
+After=bitcoin.target
+
+[Service]
+Type=Simple
+ExecStart=/storage/root/blockcount-display.py 
+Restart=on-failure
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
