@@ -5,6 +5,7 @@ import Pi7SegPy as Pi7Seg # https://pypi.org/project/Pi7SegPy/
 from threading import Thread
 import time
 import bitcoin.rpc
+import daemon
 
 Pi7Seg.init(18,23,24,2,4) # Initialize with Data:GPIO17, Clock:GPIO27, Latch:GPIO22, with 2 shift registers and 4 7 segment displays on each register
 
@@ -41,14 +42,15 @@ def counter():
         time.sleep(60)
 
 def main():
-    global a
-    a = "        "
+    with daemon.DaemonContext():
+        global a
+        a = "        "
 
-    display_thread = Thread(target=display)
-    display_thread.start()
+        display_thread = Thread(target=display)
+        display_thread.start()
 
-    counter_thread = Thread(target=counter)
-    counter_thread.start()
+        counter_thread = Thread(target=counter)
+        counter_thread.start()
 
 if __name__ == '__main__':
     main()
