@@ -4,7 +4,7 @@ This script executes the bitcoinrpc getblockcount() call periodically, obtaining
 
 Then displays it in an [8-Digit LED Tube 7 Segments 74HC595 driven](https://www.amazon.it/ILS-RobotDyn-8-Digit-Display-Segment/dp/B0768B7Q1F) connected to the raspberry.
 
-Every new block [flash](https://youtu.be/ye30J9S7PQI) the number.
+Every new block it [flashes](https://youtu.be/ye30J9S7PQI) the number.
 
 ## Pinout
 
