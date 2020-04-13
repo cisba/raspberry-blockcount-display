@@ -1,3 +1,4 @@
 python-bitcoinlib
 Pi7SegPy                                              
-~                            
+RPi.GPIO
+python-daemon
